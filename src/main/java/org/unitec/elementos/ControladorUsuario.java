@@ -1,8 +1,10 @@
 package org.unitec.elementos;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -29,5 +31,11 @@ public class ControladorUsuario
             
             return e;
         }
-    
+    // Metodo 2 -> Mostrar todos los usuarios : findAll();
+        @GetMapping("/usuario")
+        List <Usuario> buscarTodos()
+        {
+            return repoU.findAll();
+        }
+        
 }
