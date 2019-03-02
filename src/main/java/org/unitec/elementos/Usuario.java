@@ -6,8 +6,16 @@ public class Usuario
 {
     @Id
     private Integer id;
+        public Integer getId() { return id; }
+        public void setId(Integer id) { this.id = id; }
+        
     private String nombre;
+        public String getNombre() { return nombre; }
+        public void setNombre(String nombre) { this.nombre = nombre; }
+        
     private Localizacion localizacion;
+        public Localizacion getLocalizacion() { return localizacion; }
+        public void setLocalizacion(Localizacion localizacion) { this.localizacion = localizacion; }
 
     public Usuario() { }
 
@@ -16,17 +24,5 @@ public class Usuario
         this.id = id;
         this.nombre = nombre;
     }
-
-    public Localizacion getLocalizacion() { return localizacion; }
-
-    public void setLocalizacion(Localizacion localizacion) { this.localizacion = localizacion; }
-
-    public Integer getId() { return id; }
-
-    public void setId(Integer id) { this.id = id; }
-
-    public String getNombre() { return nombre; }
-
-    public void setNombre(String nombre) { this.nombre = nombre; }
-
+    
 }

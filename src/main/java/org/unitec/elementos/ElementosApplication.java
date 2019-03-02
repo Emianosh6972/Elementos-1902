@@ -21,7 +21,48 @@ public class ElementosApplication implements CommandLineRunner
     public void run(String... args) throws Exception 
     {
         // Aqui se hallaran todas las pruebas sin necesidad de una interfaz gráfica
-        repoU.save(new Usuario(1, "Emiliano"));
+        
+        //repoU.save(new Usuario(2, "Iván"));     -> Operacion de guardado
+        
+        /*                                      _
+        Usuario u = new Usuario();               |
+        u.setId(3);                              |
+        u.setNombre("Ali");                      |-> Operacion de guardado ( forma en ciclo for )
+        repoU.save(u);                           |
+        */ //                                   _|
+        
+        /*                                      _
+        for(Usuario u:repoU.findAll())           |
+        {                                        |
+            System.out.println(u);               |-> Operacion de Buscar Todos
+        }                                        |
+        */ //                                   _|
+        
+        /*                                      _
+        System.out.println                       |
+        (                                        |
+            repoU.findById(2).get()              |-> Operacion de buscar por ID
+        );                                       |
+        */ //                                   _|
+        /*
+        for(Usuario u:repoU.findByNombre("prueba"))yName("Emiliano"))
+           {
+               System.out,println(u);
+                       
+           }
+           
+        
+        /*                                      _
+        repoU.save                               |
+        (                                        |
+            new Usuario(1, "Emiliano Gallardo")  |-> Operacion de actualizar por ID
+        );                                       |
+        *///                                    _|
+
+        // repoU.deleteById(3);                   -> Operacion de Borrar 
+        
+        
+        
     }
 }
 
